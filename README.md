@@ -1,6 +1,8 @@
 # Hi there, I'm Zach 👋
 
-I'm an experienced Cloud, DevOps, and Site Reliability professional with a strong background in Systems and Networking, Coding and Scripting, Cloud Computing, Containerization and Orchestration, Infrastructure-as-Code (IaC), Continuous Integration and Deployment (CI/CD), Monitoring and Logging, Security and Compliance, Collaboration and Communication, Problem-Solving and Troubleshooting, Agile Methodologies, and Business and Domain Knowledge.
+I'm a passionate Platform Engineer with extensive experience in Cloud, DevOps, and Site Reliability Engineering. My expertise lies in Systems and Networking, Coding and Scripting, Cloud Computing, Containerization and Orchestration, Infrastructure-as-Code (IaC), Continuous Integration and Deployment (CI/CD), Monitoring and Logging, Security and Compliance, Collaboration and Communication, Problem-Solving and Troubleshooting, Agile Methodologies, and Business and Domain Knowledge.
+
+[![Zach's Github Activity](https://github-readme-activity-graph.vercel.app/graph?username=zacharyrgonzales-portfolio&theme=github)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
 ## 🔭 I’m currently working on
 - I'm currently building golang microservices and administrating them on kubernetes. 
