@@ -40,5 +40,8 @@ jobs:
           echo "<!--END:starred_repos-->" >> README.md
       - name: Commit and Push
         run: |
+          git config user.name "zacharyrgonzales-portfolio"
+          git config user.email "${{ secrets.GH_EMAIL }}"
+          git add README.md
           git diff --exit-code || git commit -m "Updated Starred Repositories"
           git push git@github.com:zacharyrgonzales-portfolio/zacharyrgonzales-portfolio.git
