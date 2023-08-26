@@ -33,6 +33,11 @@ I'm a passionate Platform Engineer with extensive experience in Cloud, DevOps, a
 
 ## 🌟 My Starred Repositories
 
-<!--START:starred_repos-->
-<!--END:starred_repos-->
 
+<!--START:starred_repos-->
+- [aws-presentation-evaluation-tool](https://github.com/aws-samples/aws-presentation-evaluation-tool)
+- [kubeview](https://github.com/benc-uk/kubeview)
+- [azure-sdk-for-go](https://github.com/Azure/azure-sdk-for-go)
+- [ChatGPT-Next-Web](https://github.com/Yidadaa/ChatGPT-Next-Web)
+- [ReGen](https://github.com/TheNittam/ReGen)
+<!--END:starred_repos-->
