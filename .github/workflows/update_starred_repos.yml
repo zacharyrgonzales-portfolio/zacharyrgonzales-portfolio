@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          ssh-key: ${{ secrets.GH_SSH_KEY }}
 
       - name: Install jq
         run: sudo apt-get install jq
@@ -37,4 +39,4 @@ jobs:
           git config user.email "${{ secrets.GH_EMAIL }}"
           git add README.md
           git diff --exit-code || git commit -m "Updated Starred Repositories"
-          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/zacharyrgonzales-portfolio/zacharyrgonzales-portfolio.git
+          git push git@github.com:zacharyrgonzales-portfolio/zacharyrgonzales-portfolio.git
