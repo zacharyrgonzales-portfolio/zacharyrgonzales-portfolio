@@ -1,0 +1,20 @@
+name: Update Starred Repos
+
+on:
+  schedule:
+    - cron: '0 * * * *' # This will run the action every hour
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Update Starred Repos
+        uses: abhisheknaiidu/awesome-github-profile-readme@master
+        with:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          MODE: "starred"
+          README_FILE: "README.md"
+          COMMIT_MSG: "📌 Updated Starred Repositories"
