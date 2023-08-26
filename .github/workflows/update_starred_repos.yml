@@ -27,7 +27,7 @@ jobs:
           curl -s "https://api.github.com/users/zacharyrgonzales-portfolio/starred?per_page=5" | jq -r '.[] | "- [" + .name + "](" + .html_url + ")"' > starred_repos.md
       - name: Update README.md
         run: |
-          sed -i '/<!--START:starred_repos-->/,<!--END:starred_repos-->/!b;//d' README.md
+          sed -i '/<!--START:starred_repos-->/,/<!--END:starred_repos-->/d' README.md
           echo "<!--START:starred_repos-->" >> README.md
           cat starred_repos.md >> README.md
           echo "<!--END:starred_repos-->" >> README.md
