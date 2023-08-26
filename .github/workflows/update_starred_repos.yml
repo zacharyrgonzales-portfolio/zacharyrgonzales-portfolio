@@ -38,3 +38,4 @@ jobs:
           git add README.md
           git commit -m "Updated Starred Repositories"
           git push
+          echo test
