@@ -3,6 +3,10 @@ name: Update Starred Repos
 on:
   schedule:
     - cron: '0 * * * *' # This will run the action every hour
+  pull_request:
+  push:
+    branches:
+    - main
 
 jobs:
   update:
