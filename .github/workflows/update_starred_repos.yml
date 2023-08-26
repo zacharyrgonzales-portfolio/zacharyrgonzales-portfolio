@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Install jq
         run: sudo apt-get install jq
@@ -36,5 +36,6 @@ jobs:
           git config user.name "zacharyrgonzales-portfolio"
           git config user.email "${{ secrets.GH_EMAIL }}"
           git add README.md
-          git commit -m "Updated Starred Repositories"
-          git push https://${{ secrets.GH_TOKEN }}@github.com/zacharyrgonzales-portfolio/zacharyrgonzales-portfolio.git
+          git diff --exit-code || git commit -m "Updated Starred Repositories"
+          git remote set-url origin https://${{ secrets.GH_PAT }}@github.com/zacharyrgonzales-portfolio/zacharyrgonzales-portfolio.git
+          git push https://${{ secrets.GH_PAT }}@github.com/zacharyrgonzales-portfolio/zacharyrgonzales-portfolio.git
