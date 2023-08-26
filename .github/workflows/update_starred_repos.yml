@@ -1,10 +1,6 @@
-name: Update Starred Repos
+name: Continuous Integration
 
 on:
-  workflow_run:
-    workflows: ["Prettier"]
-    types:
-      - completed
   schedule:
     - cron: "0 * * * *" # This will run the action every hour
   pull_request:
