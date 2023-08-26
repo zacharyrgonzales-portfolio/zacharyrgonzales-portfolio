@@ -37,5 +37,4 @@ jobs:
           git config user.email "${{ secrets.GH_EMAIL }}"
           git add README.md
           git diff --exit-code || git commit -m "Updated Starred Repositories"
-          git remote set-url origin https://${{ secrets.GH_PAT }}@github.com/zacharyrgonzales-portfolio/zacharyrgonzales-portfolio.git
-          git push https://${{ secrets.GH_PAT }}@github.com/zacharyrgonzales-portfolio/zacharyrgonzales-portfolio.git
+          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/zacharyrgonzales-portfolio/zacharyrgonzales-portfolio.git
