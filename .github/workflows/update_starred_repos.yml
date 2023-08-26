@@ -23,6 +23,11 @@ jobs:
 
       - name: Install jq
         run: sudo apt-get install jq
+    
+      - name: Set up SSH
+        run: |
+          eval "$(ssh-agent -s)"
+          ssh-add - <<< "${{ secrets.GH_SSH_KEY }}"
 
       - name: Fetch Starred Repositories
         run: |
