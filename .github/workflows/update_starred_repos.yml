@@ -1,12 +1,16 @@
 name: Update Starred Repos
 
 on:
+  workflow_run:
+    workflows: ["Prettier"]
+    types:
+      - completed
   schedule:
-    - cron: '0 * * * *' # This will run the action every hour
+    - cron: "0 * * * *" # This will run the action every hour
   pull_request:
   push:
     branches:
-    - main
+      - main
 
 jobs:
   update:
@@ -15,10 +19,22 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Update Starred Repos
-        uses: abhisheknaiidu/awesome-github-profile-readme@master
-        with:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          MODE: "starred"
-          README_FILE: "README.md"
-          COMMIT_MSG: "📌 Updated Starred Repositories"
+      - name: Install jq
+        run: sudo apt-get install jq
+
+      - name: Fetch Starred Repositories
+        run: |
+          curl -s "https://api.github.com/users/zacharyrgonzales-portfolio/starred?per_page=5" | jq -r '.[] | "- [" + .name + "](" + .html_url + ")"' > starred_repos.md
+      - name: Update README.md
+        run: |
+          sed -i '/<!--START:starred_repos-->/,<!--END:starred_repos-->/!b;//d' README.md
+          echo "<!--START:starred_repos-->" >> README.md
+          cat starred_repos.md >> README.md
+          echo "<!--END:starred_repos-->" >> README.md
+      - name: Commit and Push
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+          git add README.md
+          git commit -m "Updated Starred Repositories"
+          git push

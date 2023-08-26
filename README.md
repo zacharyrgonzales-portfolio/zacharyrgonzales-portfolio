@@ -32,3 +32,7 @@ I'm a passionate Platform Engineer with extensive experience in Cloud, DevOps, a
 - Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/zrg/)
 
 ## 🌟 My Starred Repositories
+
+<!--START:starred_repos-->
+<!--END:starred_repos-->
+
