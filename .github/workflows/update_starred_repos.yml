@@ -9,7 +9,8 @@ on:
       - main
 
 jobs:
-  update:
+  update_starred_repos_section:
+    name: Update the starred section
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -39,5 +40,5 @@ jobs:
           git config user.name "zacharyrgonzales-portfolio"
           git config user.email "${{ secrets.GH_EMAIL }}"
           git add README.md
-          git diff --exit-code || git commit -m "Updated Starred Repositories"
+          git commit -m "Updated Starred Repositories"
           git push git@github.com:zacharyrgonzales-portfolio/zacharyrgonzales-portfolio.git
