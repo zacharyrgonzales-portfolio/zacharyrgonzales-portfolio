@@ -35,9 +35,9 @@ I'm a passionate Platform Engineer with extensive experience in Cloud, DevOps, a
 
 
 <!--START:starred_repos-->
+- [slsa](https://github.com/slsa-framework/slsa)
+- [scorecard](https://github.com/ossf/scorecard)
+- [wg-identifying-security-threats](https://github.com/ossf/wg-identifying-security-threats)
 - [metallb](https://github.com/metallb/metallb)
 - [istio](https://github.com/istio/istio)
-- [aws-presentation-evaluation-tool](https://github.com/aws-samples/aws-presentation-evaluation-tool)
-- [kubeview](https://github.com/benc-uk/kubeview)
-- [azure-sdk-for-go](https://github.com/Azure/azure-sdk-for-go)
 <!--END:starred_repos-->
