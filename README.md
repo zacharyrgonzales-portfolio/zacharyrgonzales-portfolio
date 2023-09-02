@@ -35,9 +35,9 @@ I'm a passionate Platform Engineer with extensive experience in Cloud, DevOps, a
 
 
 <!--START:starred_repos-->
+- [kubebuilder](https://github.com/kubernetes-sigs/kubebuilder)
+- [kubebuilder-book-club](https://github.com/csantanapr/kubebuilder-book-club)
 - [slsa](https://github.com/slsa-framework/slsa)
 - [scorecard](https://github.com/ossf/scorecard)
 - [wg-identifying-security-threats](https://github.com/ossf/wg-identifying-security-threats)
-- [metallb](https://github.com/metallb/metallb)
-- [istio](https://github.com/istio/istio)
 <!--END:starred_repos-->
